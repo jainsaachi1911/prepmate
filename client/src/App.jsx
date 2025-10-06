@@ -9,6 +9,7 @@ import DSAStudyGuide from './pages/DSAStudyGuide';
 import SystemDesignGuide from './pages/SystemDesignGuide';
 import JavaScriptGuide from './pages/JavaScriptGuide';
 import FAANGGuide from './pages/FAANGGuide';
+import ViewCurriculum from './pages/ViewCurriculum';
 import Header from './components/Header';
 import PrivateRoute from './components/PrivateRoute';
 
@@ -30,6 +31,7 @@ export default function App() {
               <Route path="/system-design-guide" element={<SystemDesignGuide />} />
               <Route path="/javascript-guide" element={<JavaScriptGuide />} />
               <Route path="/faang-guide" element={<FAANGGuide />} />
+              <Route path="/view-curriculum" element={<ViewCurriculum />} />
             </Route>
           </Routes>
         </main>

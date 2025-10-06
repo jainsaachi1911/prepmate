@@ -39,20 +39,29 @@ export default function Home() {
       {/* Hero Section */}
       <div className="bg-gradient-to-b from-[#1A1A1A] to-[#0A0A0A] py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-5xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-8 text-white tracking-tight">
-              Master Your Tech Interviews
-            </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-12 leading-relaxed">
-              Structured learning paths and expert resources to help you land your dream tech role
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/dsa-study-guide" className="px-8 py-4 bg-white text-black hover:bg-neutral-100 rounded-lg text-lg font-medium transition-colors duration-200 text-center">
-                Get Started
-              </Link>
-              <button className="px-8 py-4 border border-neutral-600 hover:bg-neutral-800 rounded-lg text-lg font-medium transition-colors duration-200">
-                View Curriculum
-              </button>
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div className="text-left max-w-2xl">
+              <h1 className="text-5xl md:text-6xl font-bold mb-8 text-white tracking-tight">
+                Master Your Tech Interviews
+              </h1>
+              <p className="text-xl md:text-2xl text-neutral-300 mb-12 leading-relaxed">
+                Structured learning paths and expert resources to help you land your dream tech role
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/dsa-study-guide" className="px-8 py-4 bg-white text-black hover:bg-neutral-100 rounded-lg text-lg font-medium transition-colors duration-200 text-center">
+                  Get Started
+                </Link>
+                <Link to="/view-curriculum" className="px-8 py-4 border border-neutral-600 hover:bg-neutral-800 rounded-lg text-lg font-medium transition-colors duration-200">
+                  View Curriculum
+                </Link>
+              </div>
+            </div>
+            <div className="lg:w-1/2 flex justify-center">
+              <img 
+                src="/images/download.png" 
+                alt="Tech Interview Preparation" 
+                className="w-full max-w-2xl object-contain"
+              />
             </div>
           </div>
         </div>
