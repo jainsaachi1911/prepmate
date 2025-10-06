@@ -37,45 +37,51 @@ export default function SignUp() {
     }
   };
   return (
-    <div className='p-3 max-w-lg mx-auto'>
-      <h1 className='text-3xl text-center font-semibold my-7'>Sign Up</h1>
-      <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
-        <input
-          type='text'
-          placeholder='Username'
-          id='username'
-          className='bg-slate-100 p-3 rounded-lg'
-          onChange={handleChange}
-        />
-        <input
-          type='email'
-          placeholder='Email'
-          id='email'
-          className='bg-slate-100 p-3 rounded-lg'
-          onChange={handleChange}
-        />
-        <input
-          type='password'
-          placeholder='Password'
-          id='password'
-          className='bg-slate-100 p-3 rounded-lg'
-          onChange={handleChange}
-        />
-        <button
-          disabled={loading}
-          className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
-        >
-          {loading ? 'Loading...' : 'Sign Up'}
-        </button>
-        <OAuth />
-      </form>
-      <div className='flex gap-2 mt-5'>
-        <p>Have an account?</p>
-        <Link to='/sign-in'>
-          <span className='text-blue-500'>Sign in</span>
-        </Link>
+    <div className="min-h-screen bg-[#0A0A0A] text-white">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="bg-[#1A1A1A] border border-neutral-800 rounded-xl p-8">
+          <h1 className='text-3xl md:text-4xl font-semibold text-center mb-8 text-white'>Sign Up</h1>
+          <form onSubmit={handleSubmit} className='flex flex-col gap-6'>
+            <input
+              type='text'
+              placeholder='Username'
+              id='username'
+              className='bg-neutral-800 border border-neutral-700 text-white rounded-lg p-3 focus:border-neutral-600 focus:outline-none transition-colors duration-200'
+              onChange={handleChange}
+            />
+            <input
+              type='email'
+              placeholder='Email'
+              id='email'
+              className='bg-neutral-800 border border-neutral-700 text-white rounded-lg p-3 focus:border-neutral-600 focus:outline-none transition-colors duration-200'
+              onChange={handleChange}
+            />
+            <input
+              type='password'
+              placeholder='Password'
+              id='password'
+              className='bg-neutral-800 border border-neutral-700 text-white rounded-lg p-3 focus:border-neutral-600 focus:outline-none transition-colors duration-200'
+              onChange={handleChange}
+            />
+            <button
+              disabled={loading}
+              className='bg-white text-black p-3 rounded-lg font-medium hover:bg-neutral-100 disabled:opacity-80 transition-colors duration-200'
+            >
+              {loading ? 'Loading...' : 'Sign Up'}
+            </button>
+            <OAuth />
+          </form>
+          <div className='flex justify-center gap-2 mt-8 pt-6 border-t border-neutral-800'>
+            <p className='text-neutral-300'>Have an account?</p>
+            <Link to='/sign-in'>
+              <span className='text-white hover:text-neutral-300 transition-colors duration-200'>Sign in</span>
+            </Link>
+          </div>
+          {error && (
+            <p className='text-red-400 text-center mt-6'>Something went wrong!</p>
+          )}
+        </div>
       </div>
-      <p className='text-red-700 mt-5'>{error && 'Something went wrong!'}</p>
     </div>
   );
 }
