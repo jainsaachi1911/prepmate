@@ -12,7 +12,7 @@ export default function About() {
            </p>
            <div className="flex justify-center">
              <a
-               href="https://github.com/username/prepmate"
+               href="https://github.com/jainsaachi1911/prepmate"
                target="_blank"
                rel="noopener noreferrer"
                className="inline-flex items-center px-8 py-4 bg-white text-black rounded-lg text-lg font-medium hover:bg-neutral-100 transition-colors duration-200"
