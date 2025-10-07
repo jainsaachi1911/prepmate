@@ -60,7 +60,7 @@ export default function Home() {
               <img 
                 src="/images/download.png" 
                 alt="Tech Interview Preparation" 
-                className="w-full max-w-2xl object-contain"
+                className="w-full max-w-md object-contain"
               />
             </div>
           </div>
